@@ -152,7 +152,7 @@ class MultiAssetVaRAggregator:
 # --- 2. STREAMLIT INTERFACE AND CONTROL LAYOUT ---
 
 st.set_page_config(page_title="Multi-Asset Portfolio Market Risk VaR", layout="wide")
-st.title("### Multi-Asset Portfolio Market Risk: Cross-Asset Parametric VaR & Stress Testing Module")
+st.subheader("Multi-Asset Portfolio Market Risk: Cross-Asset Parametric VaR & Stress Testing Module")
 st.markdown("This market risk model is designed to quantify downside risk and perform macro-prudential stress testing for complex, cross-asset portfolios. It integrates linear equity shares, non-linear derivatives (European Options), and sovereign fixed-income assets.")
 
 # Sidebar Control Deck
