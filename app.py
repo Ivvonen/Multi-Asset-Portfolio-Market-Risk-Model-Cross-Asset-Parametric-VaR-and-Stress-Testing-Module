@@ -259,7 +259,7 @@ with left_col:
     st.plotly_chart(fig, use_container_width=True)
 
 with right_col:
-    st.subheader("Macro Structural Stress Testing Framework")
+    st.subheader("Macro Structural Stress Testing Module")
     st.markdown("Subject the mixed portfolio to absolute full valuation repricing dislocations.")
     
     scenario = st.selectbox(
