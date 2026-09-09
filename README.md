@@ -5,7 +5,7 @@ By combining a **Delta-Gamma Taylor Series approximation** with a **Bond Duratio
 
 Additionally, the **Macro Stress Testing Module** subjects the mixed portfolio to absolute, non-linear structural shocks - overriding statistical historical correlations to evaluate portfolio survival horizons under catastrophic market shifts.
 
-### Main Characteristics:
+### Core Features
 
 **Multi-Asset Risk Unification**: Integrates distinct risk factor sensitivities—Equities, Option Greeks (Delta Δ, Gamma Γ), and Bond Cash Flows (Yield-to-Maturity, Modified Duration, Convexity)—into a single, consolidated risk model.
 
