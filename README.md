@@ -6,7 +6,6 @@ Additionally, the dedicated **Macro Stress Testing Module** subjects the mixed p
 
 Live data pipelines feed the architecture dynamically, fetching historical underlying equities and real-time sovereign yield indexes while explicitly handling modern MultiIndex data structures.
 
----
 
 ## Core Analytical Features
 
@@ -16,17 +15,17 @@ Live data pipelines feed the architecture dynamically, fetching historical under
 *   **Diversified Parametric Covariance Matrix**: Automatically aggregates individual risk exposures against empirical asset correlations, isolating standalone asset risks to calculate exact portfolio diversification capital relief.
 *   **Full Revaluation Stress Testing Module**: Performs absolute Black-Scholes repricing and quadratic duration expansions under severe macroeconomic shocks (e.g., simulating a simultaneous -30% spot crash, +25% absolute volatility surge, and a -150 bps flight-to-safety yield collapse) rather than relying on localized approximations.
 
----
+
 ## Mathematical Architecture & Core Modules
 
 ### 1. The Derivative Non-Linear Mapping (Delta-Gamma VaR Module)
-To optimize calculation velocity across long historical arrays without the overhead of full revaluation, daily equity options PnL is approximated using a second-order Taylor expansion to capture price acceleration (Γ).
+To optimize calculation velocity across long historical arrays without the overhead of full revaluation, daily equity options PnL is approximated using a second-order Taylor expansion to capture price acceleration.
 
 ### 2. Fixed-Income Sensitivity Mapping (Duration-Convexity Module)
-Sovereign bond allocations are mapped inversely to interest rate changes (Δ y) via a quadratic expansion tracking immediate percentage price modifications.
+Sovereign bond allocations are mapped inversely to interest rate changes via a quadratic expansion tracking immediate percentage price modifications.
 
 ### 3. Cross-Asset Parametric Risk Aggregation
-To account for diversification benefits across asset classes, exposures are translated into a standardized **Risk-Factor Dollar Sensitivity Vector (\(\mathbf{w}\))**.
+To account for diversification benefits across asset classes, exposures are translated into a standardized **Risk-Factor Dollar Sensitivity Vector**.
 
 ### 4. Deterministic Macro Stress Testing Module
-During severe market dislocations (Δ S > 20%), historical correlation structures break down entirely. This module bypasses parametric linearizations, executing an exact **Full-Revaluation Framework** across all nodes simultaneously.
+During severe market shifts, historical correlation structures break down entirely. This module bypasses parametric linearizations, executing a **Full-Revaluation Framework** across all nodes simultaneously.
