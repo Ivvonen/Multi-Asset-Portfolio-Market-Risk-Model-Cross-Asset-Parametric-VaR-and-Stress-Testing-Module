@@ -7,11 +7,10 @@ Additionally, the **Macro Stress Testing Module** subjects the mixed portfolio t
 
 ### Core Features
 
-**Multi-Asset Risk Unification**: Integrates distinct risk factor sensitivities—Equities, Option Greeks (Delta Δ, Gamma Γ), and Bond Cash Flows (Yield-to-Maturity, Modified Duration, Convexity)—into a single, consolidated risk model.
+1. **Multi-Asset Risk Unification**: Integrates distinct risk factor sensitivities—Equities, Option Greeks (Delta Δ, Gamma Γ), and Bond Cash Flows (Yield-to-Maturity, Modified Duration, Convexity)—into a single, consolidated risk model.
+2. **Non-Linear Curvature Tracking**: Utilizes a second-order Delta-Gamma Taylor Series expansion to capture option convexity, resolving the systemic underestimation of short-position tail risk common in linear models.
 
-**Non-Linear Curvature Tracking**: Utilizes a second-order Delta-Gamma Taylor Series expansion to capture option convexity, resolving the systemic underestimation of short-position tail risk common in linear models.
-
-***Dynamic Fixed-Income Sensitivities**: Implements cash flow discounting via Newton-Raphson solvers to compute exact Modified Duration and Convexity price-responsiveness to yield curve parallel shifts.
+**Dynamic Fixed-Income Sensitivities**: Implements cash flow discounting via Newton-Raphson solvers to compute exact Modified Duration and Convexity price-responsiveness to yield curve parallel shifts.
 
 **Diversified Parametric Covariance Matrix**: Automatically aggregates individual risk exposures against empirical asset correlations, isolating standalone asset risks to calculate exact portfolio diversification capital relief.
 
