@@ -153,7 +153,7 @@ class MultiAssetVaRAggregator:
 
 st.set_page_config(page_title="Multi-Asset Portfolio Market Risk VaR", layout="wide")
 st.subheader("Multi-Asset Portfolio Market Risk: Cross-Asset Parametric Value at Risk (VaR) and Stress Testing Module")
-st.markdown("This market risk model is designed to quantify downside risk and perform macro-prudential stress testing for complex, cross-asset portfolios. It integrates linear equity shares, non-linear derivatives (European Options), and sovereign fixed-income assets. by L. Ivvonen")
+st.markdown("This market risk model is designed to quantify downside risk and perform macro-prudential stress testing for complex, cross-asset portfolios. It integrates linear equity shares, non-linear derivatives (European Options), and sovereign fixed-income assets. (by L. Ivvonen, PhD)")
 
 # Sidebar Control Deck
 st.sidebar.header("Global Portfolio Parameters")
