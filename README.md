@@ -1,4 +1,4 @@
-# Multi-Asset Portfolio Market Risk Model: Cross-Asset Parametric Value at Risk (VaR) and Stress Testing Module
+## Multi-Asset Portfolio Market Risk Model: Cross-Asset Parametric Value at Risk (VaR) and Stress Testing Module
 
 This a market risk model designed to quantify downside risk and perform macro-prudential stress testing for complex, cross-asset portfolios. This model integrates linear equity shares, non-linear derivatives (European Options), and sovereign fixed-income assets. By combining a **Delta-Gamma Taylor Series approximation** with a **Bond Duration-Convexity expansion**, the model maps risk factor dollar sensitivities into a unified **Cross-Asset Parametric Variance-Covariance (Cov-Var) Matrix** to evaluate diversified portfolio Value at Risk (VaR).
 
