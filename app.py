@@ -6,7 +6,7 @@ from scipy.stats import norm
 import plotly.graph_objects as go
 import scipy.optimize as optimize
 
-# --- 1. QUANTITATIVE RISK ENGINES ---
+# --- 1. QUANTITATIVE RISK MODELS ---
 
 class MarketDataPipeline:
     def __init__(self, ticker: str, lookback_years: int = 5):
@@ -14,7 +14,7 @@ class MarketDataPipeline:
         self.lookback_years = lookback_years
         
     def fetch_market_context(self):
-        """Fetches historical stock prices and flattens modern MultiIndex columns safely."""
+        """Fetches historical stock prices and flattens modern MultiIndex columns."""
         end_date = pd.Timestamp.now()
         start_date = end_date - pd.DateOffset(years=self.lookback_years)
         
@@ -23,7 +23,7 @@ class MarketDataPipeline:
         if data.empty:
             raise ValueError(f"No market data returned for ticker: {self.ticker}")
             
-        # --- FIXED BLOCK: Flatten MultiIndex columns if present ---
+        # --- Flatten MultiIndex columns if present ---
         if isinstance(data.columns, pd.MultiIndex):
             data.columns = data.columns.get_level_values(0)
             
@@ -64,7 +64,7 @@ class PortfolioStressTester:
         return stock_pnl + option_pnl
 
     def execute_deterministic_shock(self, spot_shock_pct: float, vol_shock_abs: float):
-        """Performs exact Black-Scholes full revaluation under severe macro shocks."""
+        """Performs Black-Scholes full revaluation under severe macroeconomic shocks."""
         t = max(1e-5, self.T)
         d1_base = (np.log(self.S0 / self.K) + (self.r + 0.5 * self.sigma**2) * t) / (self.sigma * np.sqrt(t))
         base_option_price = (self.S0 * norm.cdf(d1_base) - self.K * np.exp(-self.r * t) * norm.cdf(d1_base - self.sigma * np.sqrt(t)))
@@ -260,7 +260,7 @@ with left_col:
 
 with right_col:
     st.subheader("Macro Structural Stress Testing Framework")
-    st.markdown("Subject the mixed book to absolute full valuation repricing dislocations.")
+    st.markdown("Subject the mixed portfolio to absolute full valuation repricing dislocations.")
     
     scenario = st.selectbox(
         "Select Core Systemic Scenario Profile", 
