@@ -151,7 +151,7 @@ class MultiAssetVaRAggregator:
 
 # --- 2. STREAMLIT INTERFACE AND CONTROL LAYOUT ---
 
-st.set_page_config(page_title="Multi-Asset Market Risk Matrix", layout="wide")
+st.set_page_config(page_title="Multi-Asset Portfolio Market Risk VaR", layout="wide")
 st.title("Multi-Asset Portfolio Market Risk: Cross-Asset Parametric VaR & Stress Testing Module")
 st.markdown("This market risk model is designed to quantify downside risk and perform macro-prudential stress testing for complex, cross-asset portfolios. It integrates linear equity shares, non-linear derivatives (European Options), and sovereign fixed-income assets.")
 
@@ -208,7 +208,7 @@ min_len = min(len(historical_returns), len(yield_returns))
 aggregator = MultiAssetVaRAggregator(historical_returns[-min_len:], yield_returns[-min_len:])
 div_var, undiv_var, div_benefit = aggregator.calculate_portfolio_var(shares, spot, contracts, delta, bond_market_price, bond_duration, conf_level)
 
-st.markdown("### Executive Risk Allocation Diagnostics")
+st.markdown("### Risk Allocation Diagnostics")
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 kpi1.metric("Live Underlying Spot", f"${spot:,.2f}")
 kpi2.metric("Option Delta (Δ Exposure)", f"{delta:.4f}")
