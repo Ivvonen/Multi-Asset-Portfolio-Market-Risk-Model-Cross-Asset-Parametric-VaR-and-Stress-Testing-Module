@@ -151,8 +151,8 @@ class MultiAssetVaRAggregator:
 
 # --- 2. STREAMLIT INTERFACE AND CONTROL LAYOUT ---
 
-st.set_page_config(page_title="Multi-Asset Risk Matrix", layout="wide")
-st.title("Multi-Asset Cross-Asset Parametric & Historical Risk Engine")
+st.set_page_config(page_title="Multi-Asset Market Risk Matrix", layout="wide")
+st.title("Multi-Asset Portfolio Market Risk: Cross-Asset Parametric VaR & Stress Testing Module")
 st.markdown("A unified quantitative environment assessing non-linear derivatives risk and structural fixed income duration constraints.")
 
 # Sidebar Control Deck
