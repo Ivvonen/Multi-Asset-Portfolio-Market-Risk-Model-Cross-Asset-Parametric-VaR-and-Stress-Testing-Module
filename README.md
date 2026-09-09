@@ -4,11 +4,3 @@ This market risk model is designed to quantify downside risk and perform macro-p
 By combining a **Delta-Gamma Taylor Series approximation** with a **Bond Duration-Convexity expansion**, the model maps risk factor sensitivities into a unified **Cross-Asset Parametric Variance-Covariance (Cov-Var) Matrix** to evaluate diversified portfolio Value at Risk (VaR).
 
 Additionally, the **Macro Stress Testing Module** subjects the mixed portfolio to absolute, non-linear structural shocks - overriding statistical historical correlations to evaluate portfolio survival horizons under catastrophic market shifts.
-
-### Core Features
-
-1. **Multi-Asset Risk Unification**: Integrates distinct risk factor sensitivities (Equities, Option Greeks (Delta Δ, Gamma Γ), and Bond Cash Flows (Yield-to-Maturity, Modified Duration, Convexity))into a single, consolidated risk model.
-2. **Non-Linear Curvature Tracking**: Utilizes a second-order Delta-Gamma Taylor Series expansion to capture option convexity, resolving the systemic underestimation of short-position tail risk common in linear models.
-3. **Dynamic Fixed-Income Sensitivities**: Implements cash flow discounting via Newton-Raphson solvers to compute exact Modified Duration and Convexity price-responsiveness to yield curve parallel shifts.
-4. **Diversified Parametric Covariance Matrix**: Automatically aggregates individual risk exposures against empirical asset correlations, isolating standalone asset risks to calculate exact portfolio diversification capital relief.
-5. **Full Revaluation Stress Testing Module**: Performs absolute Black-Scholes repricing and quadratic duration expansions under severe macroeconomic shocks (e.g., simulating a simultaneous -30% spot crash, +25% absolute volatility surge, and a -150 bps flight-to-safety yield collapse) rather than relying on localized approximations.
